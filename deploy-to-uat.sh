@@ -4,7 +4,7 @@
 WAR_FILE="./target/02-RestAPI-PaytmApp-0.0.1-SNAPSHOT.war"
 
 # Path to Tomcat's webapps directory
-WEBAPPS_DIR="/opt/tomcat/webapps/"
+WEBAPPS_DIR="/opt/tomcat/webapps"
 
 # Extract context path from WAR file name
 CONTEXT_PATH=$(basename "$WAR_FILE" .war)
