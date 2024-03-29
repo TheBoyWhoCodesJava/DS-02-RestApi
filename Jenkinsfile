@@ -18,7 +18,7 @@ pipeline {
                     sh 'pwd'
                     sh 'ls -l'
                     // Run deploy-to-uat.sh script
-                    sh 'deploy-to-uat.sh'
+                    sh 'bash deploy-to-uat.sh'
                 }
             }
         }
