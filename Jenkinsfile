@@ -1,8 +1,8 @@
 pipeline {
     agent any
     
-    tools{
-    	maven 'M3'
+    tools {
+        maven 'M3'
     }
     
     stages {
@@ -13,7 +13,13 @@ pipeline {
         }
         stage('Deploy to UAT') {
             steps {
-                sh 'deploy-to-uat.sh'
+                script {
+                    // Print current directory and list files
+                    sh 'pwd'
+                    sh 'ls -l'
+                    // Run deploy-to-uat.sh script
+                    sh 'deploy-to-uat.sh'
+                }
             }
         }
     }
